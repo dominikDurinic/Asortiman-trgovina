@@ -1,0 +1,314 @@
+[
+	{
+		"Šifra proizvoda": "123456789",
+		"Naziv proizvoda": "Cedevita naranča",
+		"Vrsta proizvoda": "piće",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 200,
+		"Proizvođač": "Atlantic",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 100,
+				"Cijena (kuna)": 13.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 94,
+				"Cijena (kuna)": 16.5
+			},
+			{
+				"Naziv trgovine": "LIDL",
+				"Količina": 80,
+				"Cijena (kuna)": 12.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "987456321",
+		"Naziv proizvoda": "LEDO Pommes frites",
+		"Vrsta proizvoda": "smrznuta hrana",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 1000,
+		"Proizvođač": "LEDO plus",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 47,
+				"Cijena (kuna)": 21.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 75,
+				"Cijena (kuna)": 23
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "135798462",
+		"Naziv proizvoda": "zbregov trajno mlijeko",
+		"Vrsta proizvoda": "mliječni proizvod",
+		"Mjerna jedinica": "litra",
+		"Mjera proizvoda": 1,
+		"Proizvođač": "Vindija",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 73,
+				"Cijena (kuna)": 7.38
+			},
+			{
+				"Naziv trgovine": "LIDL",
+				"Količina": 50,
+				"Cijena (kuna)": 7.38
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 100,
+				"Cijena (kuna)": 7.38
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "789123456",
+		"Naziv proizvoda": "Pampers Premium Care",
+		"Vrsta proizvoda": "pelene",
+		"Mjerna jedinica": "komad",
+		"Mjera proizvoda": 80,
+		"Proizvođač": "Procter and Gamble",
+		"Zemlja podrijetla": "Poljska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 70,
+				"Cijena (kuna)": 149.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 60,
+				"Cijena (kuna)": 150
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 40,
+				"Cijena (kuna)": 149.97
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "456123789",
+		"Naziv proizvoda": "Cekin pileći file",
+		"Vrsta proizvoda": "meso",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 600,
+		"Proizvođač": "KOKA",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 70,
+				"Cijena (kuna)": 56.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 60,
+				"Cijena (kuna)": 58
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 50,
+				"Cijena (kuna)": 56.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "147852369",
+		"Naziv proizvoda": "Dorina čokolada mliječna",
+		"Vrsta proizvoda": "slatkiš",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 80,
+		"Proizvođač": "KRAŠ",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 30,
+				"Cijena (kuna)": 5.99
+			},
+			{
+				"Naziv trgovine": "LIDL",
+				"Količina": 50,
+				"Cijena (kuna)": 5.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 48,
+				"Cijena (kuna)": 6.99
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 68,
+				"Cijena (kuna)": 5.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "963258741",
+		"Naziv proizvoda": "Zvijezda suncokretovo ulje",
+		"Vrsta proizvoda": "ulje",
+		"Mjerna jedinica": "litra",
+		"Mjera proizvoda": 1,
+		"Proizvođač": "ZVIJEZDA",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 30,
+				"Cijena (kuna)": 15.99
+			},
+			{
+				"Naziv trgovine": "LIDL",
+				"Količina": 20,
+				"Cijena (kuna)": 15.99
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 40,
+				"Cijena (kuna)": 14.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "124578963",
+		"Naziv proizvoda": "Zewa Deluxe Toaletni papir",
+		"Vrsta proizvoda": "potrepštine",
+		"Mjerna jedinica": "komad",
+		"Mjera proizvoda": 10,
+		"Proizvođač": "SCA Hygiene Products",
+		"Zemlja podrijetla": "Austrija",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 50,
+				"Cijena (kuna)": 49.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 40,
+				"Cijena (kuna)": 48.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "485455888",
+		"Naziv proizvoda": "Pšenično bijelo brašno glatko",
+		"Vrsta proizvoda": "brašno",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 1000,
+		"Proizvođač": "Granolio",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 100,
+				"Cijena (kuna)": 5.77
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 100,
+				"Cijena (kuna)": 6
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "378624525",
+		"Naziv proizvoda": "Juicy Sok 100% naranča",
+		"Vrsta proizvoda": "piće",
+		"Mjerna jedinica": "litra",
+		"Mjera proizvoda": 1,
+		"Proizvođač": "Stanić Beverages",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 30,
+				"Cijena (kuna)": 14.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 50,
+				"Cijena (kuna)": 14.99
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 30,
+				"Cijena (kuna)": 14.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "231458456",
+		"Naziv proizvoda": "Vegeta Original",
+		"Vrsta proizvoda": "začin",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 250,
+		"Proizvođač": "PODRAVKA",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 50,
+				"Cijena (kuna)": 16.99
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 62,
+				"Cijena (kuna)": 15.99
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 42,
+				"Cijena (kuna)": 14.99
+			},
+			{
+				"Naziv trgovine": "LIDL",
+				"Količina": 75,
+				"Cijena (kuna)": 14.99
+			}
+		]
+	},
+	{
+		"Šifra proizvoda": "789946161",
+		"Naziv proizvoda": "Orbit Žvakaća guma spearmint",
+		"Vrsta proizvoda": "slatkiš",
+		"Mjerna jedinica": "gram",
+		"Mjera proizvoda": 14,
+		"Proizvođač": "Mars Hrvatska",
+		"Zemlja podrijetla": "Hrvatska",
+		"Prodavaonica": [
+			{
+				"Naziv trgovine": "Kaufland",
+				"Količina": 50,
+				"Cijena (kuna)": 6
+			},
+			{
+				"Naziv trgovine": "Spar",
+				"Količina": 40,
+				"Cijena (kuna)": 6
+			},
+			{
+				"Naziv trgovine": "Konzum",
+				"Količina": 30,
+				"Cijena (kuna)": 5.49
+			},
+			{
+				"Naziv trgovine": "LIDL",
+				"Količina": 20,
+				"Cijena (kuna)": 5.49
+			}
+		]
+	}
+]
