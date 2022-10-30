@@ -130,7 +130,7 @@ COPY(
 			asortiman.trgovackiLanac,
 			asortiman.kolicina,
 			asortiman.cijena
-	FROM proizvod natural join asortiman
+	FROM proizvod NATURAL JOIN asortiman
 ) TO 'C://FER/OTVRAC/1.Labos/asortiman_trgovina.csv' WITH DELIMITER ',';
 
 /*Izdvajanje podataka u JSON format*/
@@ -145,15 +145,15 @@ COPY (
 				proizvodac as "Proizvođač",
 				zemljaPodrijetla as "Zemlja podrijetla",
 			(
-			  select array_to_json(array_agg(row_to_json(trgovinaInfo)))
-			  from (
-				select trgovackiLanac as "Naziv trgovine",
+			  SELECT array_to_json(array_agg(row_to_json(trgovinaInfo)))
+			  FROM (
+				SELECT trgovackiLanac as "Naziv trgovine",
 						kolicina as "Količina",
 						cijena as "Cijena (kuna)"
-				from asortiman
-				where proizvod.sifraProizvod = asortiman.sifraProizvod
+				FROM asortiman
+				WHERE proizvod.sifraProizvod = asortiman.sifraProizvod
 			  ) as trgovinaInfo
 			) as "Prodavaonica"
-	  from proizvod
+	  FROM proizvod
 	) as artikli
 )TO 'C://FER/OTVRAC/1.Labos/asortiman_trgovina.json'; 
