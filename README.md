@@ -23,7 +23,7 @@ Svaki proizvod je opisan pomoću 7 atributa te je prikazana njegova dostupnost i
 
 ### Metapodaci<br>
 ---
-**Naziv:**  Asortiman trgovina<br>
+**Naslov:**  Asortiman trgovina<br>
 **Ključne riječi:**  proizvod, dostupnost, cijena<br>
 **Autor:**  Dominik Đurinić<br>
 **Institucija:** Fakultet elektrotehnike i računarstva u Zagrebu<br>
