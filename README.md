@@ -17,7 +17,7 @@ Svaki proizvod je opisan pomoću 7 atributa te je prikazana njegova dostupnost i
 
 #### Atributi za opis dostupnosti i cijene proizvoda su:
 - Naziv trgovine (naziv trgovačkog lanca)
-- Količina (stanje proizvoda u pojedinom trgovačkom lancu)
+- Količina (stanje proizvoda u pojedinom trgovačkom lancu u tom danu)
 - Cijena (cijena iskazana u kunama)
 
 
@@ -30,5 +30,6 @@ Svaki proizvod je opisan pomoću 7 atributa te je prikazana njegova dostupnost i
 **Datum kreiranja skupa:**  30.10.2022.<br>
 **Verzija:**  1.0<br>
 **Jezik:**  hrvatski<br>
-**Licenca:** Creative Commons [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)<br>
-**Dostupni formati skupa:**  CSV, JSON
+**Licenca:** Creative Commons Attribution 4.0 International [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)<br>
+**Dostupni formati skupa:**  CSV, JSON<br>
+**Frekvencija ažuriranja:**  dnevno
