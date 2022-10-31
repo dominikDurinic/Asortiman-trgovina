@@ -1,159 +1,121 @@
-CREATE TABLE asortiman
-	(sifraProizvod VARCHAR(13),
-	 trgovackiLanac VARCHAR(30),
-	 kolicina INTEGER,
-	 cijena REAL);
-	 
-CREATE TABLE proizvod
-	(sifraProizvod VARCHAR(13),
-	 nazivProizvod VARCHAR(30),
-	 vrstaProizvod VARCHAR(30),
-	 mjernaJed VARCHAR(10),
-	 mjeraProizvod REAL,
-	 proizvodac VARCHAR(30),
-	 zemljaPodrijetla VARCHAR(30)
-	);
+--
+-- PostgreSQL database dump
+--
 
-INSERT INTO asortiman VALUES
-('123456789','Konzum',100,13.99);
-INSERT INTO asortiman VALUES
-('123456789','Spar',94,16.50);
-INSERT INTO asortiman VALUES
-('123456789','LIDL',80,12.99);
-INSERT INTO proizvod VALUES
-('123456789','Cedevita naranča','piće','gram',200,'Atlantic','Hrvatska');
+-- Dumped from database version 14.2
+-- Dumped by pg_dump version 14.2
 
-INSERT INTO asortiman VALUES
-('987456321','Konzum',47,21.99);
-INSERT INTO asortiman VALUES
-('987456321','Spar',75,23.00);
-INSERT INTO proizvod VALUES
-('987456321','LEDO Pommes frites','smrznuta hrana','gram',1000,'LEDO plus','Hrvatska');
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
 
+SET default_tablespace = '';
 
-INSERT INTO asortiman VALUES
-('135798462','Kaufland',73,7.38);
-INSERT INTO asortiman VALUES
-('135798462','LIDL',50,7.38);
-INSERT INTO asortiman VALUES
-('135798462','Konzum',100,7.38);
-INSERT INTO proizvod VALUES
-('135798462','zbregov trajno mlijeko','mliječni proizvod','litra',1,'Vindija','Hrvatska');
+SET default_table_access_method = heap;
 
-INSERT INTO asortiman VALUES
-('789123456','Kaufland',70,149.99);
-INSERT INTO asortiman VALUES
-('789123456','Spar',60,150.00);
-INSERT INTO asortiman VALUES
-('789123456','Konzum',40,149.97);
-INSERT INTO proizvod VALUES
-('789123456','Pampers Premium Care','pelene','komad',80,'Procter and Gamble','Poljska');
+--
+-- Name: asortiman; Type: TABLE; Schema: public; Owner: postgres
+--
 
-INSERT INTO asortiman VALUES
-('456123789','Kaufland',70,56.99);
-INSERT INTO asortiman VALUES
-('456123789','Spar',60,58.00);
-INSERT INTO asortiman VALUES
-('456123789','Konzum',50,56.99);
-INSERT INTO proizvod VALUES
-('456123789','Cekin pileći file','meso','gram',600,'KOKA','Hrvatska');
-
-INSERT INTO asortiman VALUES
-('147852369','Kaufland',30,5.99);
-INSERT INTO asortiman VALUES
-('147852369','LIDL',50,5.99);
-INSERT INTO asortiman VALUES
-('147852369','Spar',48,6.99);
-INSERT INTO asortiman VALUES
-('147852369','Konzum',68,5.99);
-INSERT INTO proizvod VALUES
-('147852369','Dorina čokolada mliječna','slatkiš','gram',80,'KRAŠ','Hrvatska');
-
-INSERT INTO asortiman VALUES
-('963258741','Kaufland',30,15.99);
-INSERT INTO asortiman VALUES
-('963258741','LIDL',20,15.99);
-INSERT INTO asortiman VALUES
-('963258741','Konzum',40,14.99);
-INSERT INTO proizvod VALUES
-('963258741','Zvijezda suncokretovo ulje','ulje','litra',1,'ZVIJEZDA','Hrvatska');
-
-INSERT INTO asortiman VALUES
-('124578963','Kaufland',50,49.99);
-INSERT INTO asortiman VALUES
-('124578963','Spar',40,48.99);
-INSERT INTO proizvod VALUES
-('124578963','Zewa Deluxe Toaletni papir','potrepštine','komad',10,'SCA Hygiene Products','Austrija');
-
-INSERT INTO asortiman VALUES
-('485455888','Konzum',100,5.77);
-INSERT INTO asortiman VALUES
-('485455888','Spar',100,6.00);
-INSERT INTO proizvod VALUES
-('485455888','Pšenično bijelo brašno glatko','brašno','gram',1000,'Granolio','Hrvatska');
-
-INSERT INTO asortiman VALUES
-('378624525','Kaufland',30,14.99);
-INSERT INTO asortiman VALUES
-('378624525','Spar',50,14.99);
-INSERT INTO asortiman VALUES
-('378624525','Konzum',30,14.99);
-INSERT INTO proizvod VALUES
-('378624525','Juicy Sok 100% naranča','piće','litra',1,'Stanić Beverages','Hrvatska');
+CREATE TABLE public.asortiman (
+    sifraproizvod character varying(13),
+    trgovackilanac character varying(30),
+    kolicina integer,
+    cijena real
+);
 
 
-INSERT INTO asortiman VALUES
-('231458456','Kaufland',50,16.99);
-INSERT INTO asortiman VALUES
-('231458456','Spar',62,15.99);
-INSERT INTO asortiman VALUES
-('231458456','Konzum',42,14.99);
-INSERT INTO asortiman VALUES
-('231458456','LIDL',75,14.99);
-INSERT INTO proizvod VALUES
-('231458456','Vegeta Original','začin','gram',250,'PODRAVKA','Hrvatska');
+ALTER TABLE public.asortiman OWNER TO postgres;
 
-INSERT INTO asortiman VALUES
-('789946161','Kaufland',50,6.00);
-INSERT INTO asortiman VALUES
-('789946161','Spar',40,6.00);
-INSERT INTO asortiman VALUES
-('789946161','Konzum',30,5.49);
-INSERT INTO asortiman VALUES
-('789946161','LIDL',20,5.49);
-INSERT INTO proizvod VALUES
-('789946161','Orbit Žvakaća guma spearmint','slatkiš','gram',14,'Mars Hrvatska','Hrvatska');
+--
+-- Name: proizvod; Type: TABLE; Schema: public; Owner: postgres
+--
 
-/*Izdvajanje podataka u CSV format*/
-COPY(
-	SELECT proizvod.*, 
-			asortiman.trgovackiLanac,
-			asortiman.kolicina,
-			asortiman.cijena
-	FROM proizvod NATURAL JOIN asortiman
-) TO 'C://FER/OTVRAC/1.Labos/asortiman_trgovina.csv' WITH DELIMITER ',';
+CREATE TABLE public.proizvod (
+    sifraproizvod character varying(13),
+    nazivproizvod character varying(30),
+    vrstaproizvod character varying(30),
+    mjernajed character varying(10),
+    mjeraproizvod real,
+    proizvodac character varying(30),
+    zemljapodrijetla character varying(30)
+);
 
-/*Izdvajanje podataka u JSON format*/
-COPY (
-    SELECT array_to_json(array_agg(row_to_json(artikli)))
-	FROM (
-		SELECT sifraProizvod as "Šifra proizvoda",
-				nazivProizvod as "Naziv proizvoda",
-				vrstaProizvod as "Vrsta proizvoda",
-				mjernaJed as "Mjerna jedinica",
-				mjeraProizvod as "Mjera proizvoda",
-				proizvodac as "Proizvođač",
-				zemljaPodrijetla as "Zemlja podrijetla",
-			(
-			  SELECT array_to_json(array_agg(row_to_json(trgovinaInfo)))
-			  FROM (
-				SELECT trgovackiLanac as "Naziv trgovine",
-						kolicina as "Količina",
-						cijena as "Cijena (kuna)"
-				FROM asortiman
-				WHERE proizvod.sifraProizvod = asortiman.sifraProizvod
-			  ) as trgovinaInfo
-			) as "Prodavaonica"
-	  FROM proizvod
-	) as artikli
-)TO 'C://FER/OTVRAC/1.Labos/asortiman_trgovina.json'; 
+
+ALTER TABLE public.proizvod OWNER TO postgres;
+
+--
+-- Data for Name: asortiman; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.asortiman (sifraproizvod, trgovackilanac, kolicina, cijena) FROM stdin;
+123456789	Konzum	100	13.99
+123456789	Spar	94	16.5
+123456789	LIDL	80	12.99
+987456321	Konzum	47	21.99
+987456321	Spar	75	23
+135798462	Kaufland	73	7.38
+135798462	LIDL	50	7.38
+135798462	Konzum	100	7.38
+789123456	Kaufland	70	149.99
+789123456	Spar	60	150
+789123456	Konzum	40	149.97
+456123789	Kaufland	70	56.99
+456123789	Spar	60	58
+456123789	Konzum	50	56.99
+147852369	Kaufland	30	5.99
+147852369	LIDL	50	5.99
+147852369	Spar	48	6.99
+147852369	Konzum	68	5.99
+963258741	Kaufland	30	15.99
+963258741	LIDL	20	15.99
+963258741	Konzum	40	14.99
+124578963	Kaufland	50	49.99
+124578963	Spar	40	48.99
+485455888	Konzum	100	5.77
+485455888	Spar	100	6
+378624525	Kaufland	30	14.99
+378624525	Spar	50	14.99
+378624525	Konzum	30	14.99
+231458456	Kaufland	50	16.99
+231458456	Spar	62	15.99
+231458456	Konzum	42	14.99
+231458456	LIDL	75	14.99
+789946161	Kaufland	50	6
+789946161	Spar	40	6
+789946161	Konzum	30	5.49
+789946161	LIDL	20	5.49
+\.
+
+
+--
+-- Data for Name: proizvod; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.proizvod (sifraproizvod, nazivproizvod, vrstaproizvod, mjernajed, mjeraproizvod, proizvodac, zemljapodrijetla) FROM stdin;
+123456789	Cedevita naranča	piće	gram	200	Atlantic	Hrvatska
+987456321	LEDO Pommes frites	smrznuta hrana	gram	1000	LEDO plus	Hrvatska
+135798462	zbregov trajno mlijeko	mliječni proizvod	litra	1	Vindija	Hrvatska
+789123456	Pampers Premium Care	pelene	komad	80	Procter and Gamble	Poljska
+456123789	Cekin pileći file	meso	gram	600	KOKA	Hrvatska
+147852369	Dorina čokolada mliječna	slatkiš	gram	80	KRAŠ	Hrvatska
+963258741	Zvijezda suncokretovo ulje	ulje	litra	1	ZVIJEZDA	Hrvatska
+124578963	Zewa Deluxe Toaletni papir	potrepštine	komad	10	SCA Hygiene Products	Austrija
+485455888	Pšenično bijelo brašno glatko	brašno	gram	1000	Granolio	Hrvatska
+378624525	Juicy Sok 100% naranča	piće	litra	1	Stanić Beverages	Hrvatska
+231458456	Vegeta Original	začin	gram	250	PODRAVKA	Hrvatska
+789946161	Orbit Žvakaća guma spearmint	slatkiš	gram	14	Mars Hrvatska	Hrvatska
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+
