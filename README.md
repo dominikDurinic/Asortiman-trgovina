@@ -1,4 +1,4 @@
-# Release-1.0
+# Asortiman trgovina
 
 ### Opis skupa podataka
 ---
