@@ -4,7 +4,7 @@
 ---
 **"Asortiman tragovina"** je **skup otvorenih podataka** izrađen kako bi omogućio prikaz i opis različitih proizvoda te njihovu dostupnost u različitim trgovinama.<br>
 Skup se sastoji od 12 instanci podataka, tj. 12 različitih proizvoda.<br>
-Svaki proizvod je opisan pomoću 7 atributa te je prikazana njegova dostupnost i cijena u pojedinim trgovinama pomoću dodatna 3 atributa.<br>
+Svaki proizvod je opisan pomoću 10 atributa te je prikazana njegova dostupnost i cijena u pojedinim trgovinama pomoću dodatna 3 atributa.<br>
 
 #### Atributi za opis proizvoda su:
 - Šifra proizvoda (jedinstveni identifikator proizvoda)
@@ -14,6 +14,9 @@ Svaki proizvod je opisan pomoću 7 atributa te je prikazana njegova dostupnost i
 - Mjera proizvoda (količina proizvoda, broj)
 - Proizvođač (naziv proizvođača)
 - Zemlja podrijetla (zemlja podrijetla proizvoda)
+- Dobno ograničenje (ograničenje na dozvoljenu dob za kupnju proizvoda)
+- Skladištenje (način skladištenja u trgovini (*stalaža, hladnjak, zamrzivač*))
+- Godina proizvodnje (godina kada je proizvod proizveden)
 
 #### Atributi za opis dostupnosti i cijene proizvoda su:
 - Naziv trgovine (naziv trgovačkog lanca)
