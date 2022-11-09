@@ -45,7 +45,10 @@ CREATE TABLE public.proizvod (
     mjernajed character varying(10),
     mjeraproizvod real,
     proizvodac character varying(30),
-    zemljapodrijetla character varying(30)
+    zemljapodrijetla character varying(30),
+    dobnoogranicenje character(2),
+    skladistenje character varying(10),
+    godinaproizvodnje integer
 );
 
 
@@ -99,19 +102,19 @@ COPY public.asortiman (sifraproizvod, trgovackilanac, kolicina, cijena) FROM std
 -- Data for Name: proizvod; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.proizvod (sifraproizvod, nazivproizvod, vrstaproizvod, mjernajed, mjeraproizvod, proizvodac, zemljapodrijetla) FROM stdin;
-123456789	Cedevita naranča	piće	gram	200	Atlantic	Hrvatska
-987456321	LEDO Pommes frites	smrznuta hrana	gram	1000	LEDO plus	Hrvatska
-135798462	zbregov trajno mlijeko	mliječni proizvod	litra	1	Vindija	Hrvatska
-789123456	Pampers Premium Care	pelene	komad	80	Procter and Gamble	Poljska
-456123789	Cekin pileći file	meso	gram	600	KOKA	Hrvatska
-147852369	Dorina čokolada mliječna	slatkiš	gram	80	KRAŠ	Hrvatska
-963258741	Zvijezda suncokretovo ulje	ulje	litra	1	ZVIJEZDA	Hrvatska
-124578963	Zewa Deluxe Toaletni papir	potrepštine	komad	10	SCA Hygiene Products	Austrija
-485455888	Pšenično bijelo brašno glatko	brašno	gram	1000	Granolio	Hrvatska
-378624525	Juicy Sok 100% naranča	piće	litra	1	Stanić Beverages	Hrvatska
-231458456	Vegeta Original	začin	gram	250	PODRAVKA	Hrvatska
-789946161	Orbit Žvakaća guma spearmint	slatkiš	gram	14	Mars Hrvatska	Hrvatska
+COPY public.proizvod (sifraproizvod, nazivproizvod, vrstaproizvod, mjernajed, mjeraproizvod, proizvodac, zemljapodrijetla, dobnoogranicenje, skladistenje, godinaproizvodnje) FROM stdin;
+123456789	Cedevita naranča	piće	gram	200	Atlantic	Hrvatska	ne	stalaža	2022
+789123456	Pampers Premium Care	pelene	komad	80	Procter and Gamble	Poljska	ne	stalaža	2022
+147852369	Dorina čokolada mliječna	slatkiš	gram	80	KRAŠ	Hrvatska	ne	stalaža	2022
+963258741	Zvijezda suncokretovo ulje	ulje	litra	1	ZVIJEZDA	Hrvatska	ne	stalaža	2022
+124578963	Zewa Deluxe Toaletni papir	potrepštine	komad	10	SCA Hygiene Products	Austrija	ne	stalaža	2022
+485455888	Pšenično bijelo brašno glatko	brašno	gram	1000	Granolio	Hrvatska	ne	stalaža	2022
+378624525	Juicy Sok 100% naranča	piće	litra	1	Stanić Beverages	Hrvatska	ne	stalaža	2022
+231458456	Vegeta Original	začin	gram	250	PODRAVKA	Hrvatska	ne	stalaža	2022
+789946161	Orbit Žvakaća guma spearmint	slatkiš	gram	14	Mars Hrvatska	Hrvatska	ne	stalaža	2022
+135798462	zbregov trajno mlijeko	mliječni proizvod	litra	1	Vindija	Hrvatska	ne	hladnjak	2022
+456123789	Cekin pileći file	meso	gram	600	KOKA	Hrvatska	ne	hladnjak	2022
+987456321	LEDO Pommes frites	smrznuta hrana	gram	1000	LEDO plus	Hrvatska	ne	zamrzivač	2021
 \.
 
 

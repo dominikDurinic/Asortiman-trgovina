@@ -1,36 +1,36 @@
-123456789,Cedevita naranča,piće,gram,200,Atlantic,Hrvatska,Konzum,100,13.99
-123456789,Cedevita naranča,piće,gram,200,Atlantic,Hrvatska,Spar,94,16.5
-123456789,Cedevita naranča,piće,gram,200,Atlantic,Hrvatska,LIDL,80,12.99
-987456321,LEDO Pommes frites,smrznuta hrana,gram,1000,LEDO plus,Hrvatska,Konzum,47,21.99
-987456321,LEDO Pommes frites,smrznuta hrana,gram,1000,LEDO plus,Hrvatska,Spar,75,23
-135798462,zbregov trajno mlijeko,mliječni proizvod,litra,1,Vindija,Hrvatska,Kaufland,73,7.38
-135798462,zbregov trajno mlijeko,mliječni proizvod,litra,1,Vindija,Hrvatska,LIDL,50,7.38
-135798462,zbregov trajno mlijeko,mliječni proizvod,litra,1,Vindija,Hrvatska,Konzum,100,7.38
-789123456,Pampers Premium Care,pelene,komad,80,Procter and Gamble,Poljska,Kaufland,70,149.99
-789123456,Pampers Premium Care,pelene,komad,80,Procter and Gamble,Poljska,Spar,60,150
-789123456,Pampers Premium Care,pelene,komad,80,Procter and Gamble,Poljska,Konzum,40,149.97
-456123789,Cekin pileći file,meso,gram,600,KOKA,Hrvatska,Kaufland,70,56.99
-456123789,Cekin pileći file,meso,gram,600,KOKA,Hrvatska,Spar,60,58
-456123789,Cekin pileći file,meso,gram,600,KOKA,Hrvatska,Konzum,50,56.99
-147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,Kaufland,30,5.99
-147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,LIDL,50,5.99
-147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,Spar,48,6.99
-147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,Konzum,68,5.99
-963258741,Zvijezda suncokretovo ulje,ulje,litra,1,ZVIJEZDA,Hrvatska,Kaufland,30,15.99
-963258741,Zvijezda suncokretovo ulje,ulje,litra,1,ZVIJEZDA,Hrvatska,LIDL,20,15.99
-963258741,Zvijezda suncokretovo ulje,ulje,litra,1,ZVIJEZDA,Hrvatska,Konzum,40,14.99
-124578963,Zewa Deluxe Toaletni papir,potrepštine,komad,10,SCA Hygiene Products,Austrija,Kaufland,50,49.99
-124578963,Zewa Deluxe Toaletni papir,potrepštine,komad,10,SCA Hygiene Products,Austrija,Spar,40,48.99
-485455888,Pšenično bijelo brašno glatko,brašno,gram,1000,Granolio,Hrvatska,Konzum,100,5.77
-485455888,Pšenično bijelo brašno glatko,brašno,gram,1000,Granolio,Hrvatska,Spar,100,6
-378624525,Juicy Sok 100% naranča,piće,litra,1,Stanić Beverages,Hrvatska,Kaufland,30,14.99
-378624525,Juicy Sok 100% naranča,piće,litra,1,Stanić Beverages,Hrvatska,Spar,50,14.99
-378624525,Juicy Sok 100% naranča,piće,litra,1,Stanić Beverages,Hrvatska,Konzum,30,14.99
-231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,Kaufland,50,16.99
-231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,Spar,62,15.99
-231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,Konzum,42,14.99
-231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,LIDL,75,14.99
-789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,Kaufland,50,6
-789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,Spar,40,6
-789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,Konzum,30,5.49
-789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,LIDL,20,5.49
+123456789,Cedevita naranča,piće,gram,200,Atlantic,Hrvatska,ne,stalaža,2022,Konzum,100,13.99
+123456789,Cedevita naranča,piće,gram,200,Atlantic,Hrvatska,ne,stalaža,2022,Spar,94,16.5
+123456789,Cedevita naranča,piće,gram,200,Atlantic,Hrvatska,ne,stalaža,2022,LIDL,80,12.99
+987456321,LEDO Pommes frites,smrznuta hrana,gram,1000,LEDO plus,Hrvatska,ne,zamrzivač,2021,Konzum,47,21.99
+987456321,LEDO Pommes frites,smrznuta hrana,gram,1000,LEDO plus,Hrvatska,ne,zamrzivač,2021,Spar,75,23
+135798462,zbregov trajno mlijeko,mliječni proizvod,litra,1,Vindija,Hrvatska,ne,hladnjak,2022,Kaufland,73,7.38
+135798462,zbregov trajno mlijeko,mliječni proizvod,litra,1,Vindija,Hrvatska,ne,hladnjak,2022,LIDL,50,7.38
+135798462,zbregov trajno mlijeko,mliječni proizvod,litra,1,Vindija,Hrvatska,ne,hladnjak,2022,Konzum,100,7.38
+789123456,Pampers Premium Care,pelene,komad,80,Procter and Gamble,Poljska,ne,stalaža,2022,Kaufland,70,149.99
+789123456,Pampers Premium Care,pelene,komad,80,Procter and Gamble,Poljska,ne,stalaža,2022,Spar,60,150
+789123456,Pampers Premium Care,pelene,komad,80,Procter and Gamble,Poljska,ne,stalaža,2022,Konzum,40,149.97
+456123789,Cekin pileći file,meso,gram,600,KOKA,Hrvatska,ne,hladnjak,2022,Kaufland,70,56.99
+456123789,Cekin pileći file,meso,gram,600,KOKA,Hrvatska,ne,hladnjak,2022,Spar,60,58
+456123789,Cekin pileći file,meso,gram,600,KOKA,Hrvatska,ne,hladnjak,2022,Konzum,50,56.99
+147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,ne,stalaža,2022,Kaufland,30,5.99
+147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,ne,stalaža,2022,LIDL,50,5.99
+147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,ne,stalaža,2022,Spar,48,6.99
+147852369,Dorina čokolada mliječna,slatkiš,gram,80,KRAŠ,Hrvatska,ne,stalaža,2022,Konzum,68,5.99
+963258741,Zvijezda suncokretovo ulje,ulje,litra,1,ZVIJEZDA,Hrvatska,ne,stalaža,2022,Kaufland,30,15.99
+963258741,Zvijezda suncokretovo ulje,ulje,litra,1,ZVIJEZDA,Hrvatska,ne,stalaža,2022,LIDL,20,15.99
+963258741,Zvijezda suncokretovo ulje,ulje,litra,1,ZVIJEZDA,Hrvatska,ne,stalaža,2022,Konzum,40,14.99
+124578963,Zewa Deluxe Toaletni papir,potrepštine,komad,10,SCA Hygiene Products,Austrija,ne,stalaža,2022,Kaufland,50,49.99
+124578963,Zewa Deluxe Toaletni papir,potrepštine,komad,10,SCA Hygiene Products,Austrija,ne,stalaža,2022,Spar,40,48.99
+485455888,Pšenično bijelo brašno glatko,brašno,gram,1000,Granolio,Hrvatska,ne,stalaža,2022,Konzum,100,5.77
+485455888,Pšenično bijelo brašno glatko,brašno,gram,1000,Granolio,Hrvatska,ne,stalaža,2022,Spar,100,6
+378624525,Juicy Sok 100% naranča,piće,litra,1,Stanić Beverages,Hrvatska,ne,stalaža,2022,Kaufland,30,14.99
+378624525,Juicy Sok 100% naranča,piće,litra,1,Stanić Beverages,Hrvatska,ne,stalaža,2022,Spar,50,14.99
+378624525,Juicy Sok 100% naranča,piće,litra,1,Stanić Beverages,Hrvatska,ne,stalaža,2022,Konzum,30,14.99
+231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,ne,stalaža,2022,Kaufland,50,16.99
+231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,ne,stalaža,2022,Spar,62,15.99
+231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,ne,stalaža,2022,Konzum,42,14.99
+231458456,Vegeta Original,začin,gram,250,PODRAVKA,Hrvatska,ne,stalaža,2022,LIDL,75,14.99
+789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,ne,stalaža,2022,Kaufland,50,6
+789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,ne,stalaža,2022,Spar,40,6
+789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,ne,stalaža,2022,Konzum,30,5.49
+789946161,Orbit Žvakaća guma spearmint,slatkiš,gram,14,Mars Hrvatska,Hrvatska,ne,stalaža,2022,LIDL,20,5.49
