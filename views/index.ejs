@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/logohead.png" type="image/icon">
+    <title>Asortiman trgovina</title>
+    <author hidden>Dominik Đurinić</author>
+</head> 
+<body class="sadržaj">
+    <header class="zaglavlje">
+        <nav class="navigacija">
+            <div class="naslovnica">
+                <a href="/" class="slika">
+                    <img class="logo" src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="naslovnica">
+                <a href="/" class="stil-slova-header nonselected naslov">OTVORENI SKUP PODATAKA "Asortiman trgovina"</a>
+            </div>
+            <div class="meni">
+                <a href="/" class="link stil-slova-header ">O skupu</a>
+                <a href="/datatable" class="link stil-slova-header nonselected">Tablica</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="glavni stil-slova-main">
+        <div class="bg-img">
+            <div class="opis">
+                <b>Asortiman tragovina</b><br><br> 
+                Otvoreni skup podataka izrađen kako bi omogućio prikaz i opis različitih proizvoda te njihovu dostupnost u različitim trgovinama.
+                Skup se sastoji od 12 instanci podataka, tj. 12 različitih proizvoda.
+                Svaki proizvod je opisan pomoću 10 atributa te je prikazana njegova dostupnost i cijena u pojedinim trgovinama pomoću dodatna 3 atributa.
+            </div>
+        </div>
+        <p class=" podaci-preuzmi stil-slova-main"><b>Atributi skupa podataka</b></p> 
+        <hr>
+        <div class="popis">
+                <div class="opis-proizvoda-trgovina">
+                <p class="naziv-popisa"><b>Atributi za opis proizvoda su:</b></p>
+                <dl>
+                    <dt><b>Šifra proizvoda</b></dt><dd>jedinstveni identifikator proizvoda</dd>
+                    <dt><b>Naziv proizvoda</b></dt><dd>naziv proizvoda</dd>
+                    <dt><b>Vrsta proizvoda</b></dt><dd>kategorija proizvoda : <u>mliječni proizvod, smrznuta hrana, meso, piće, slatkiš, ulje, brašno, začin, potrepštine, pelene</u></dd>
+                    <dt><b>Mjerna jedinica</b></dt><dd>mjerna jedinica u kojoj je iskazana količina proizvoda (<u>gram, litra, komad</u>)</dd>
+                    <dt><b>Mjera proizvoda</b></dt><dd>količina proizvoda, broj</dd>
+                    <dt><b>Proizvođač</b></dt><dd>naziv proizvođača</dd>
+                    <dt><b>Zemlja podrijetla</b></dt><dd>zemlja podrijetla proizvoda</dd>
+                    <dt><b>Dobno ograničenje</b></dt><dd>ograničenje na dozvoljenu dob za kupnju proizvoda</dd>
+                    <dt><b>Skladištenje</b></dt><dd>način skladištenja u trgovini (<u>stalaža, hladnjak, zamrzivač</u>)</dd>
+                    <dt><b>Godina proizvodnje</b></dt><dd>godina kada je proizvod proizveden</dd>
+                </dl>
+                </div>
+                <div class="opis-proizvoda-trgovina">
+                    <p class="naziv-popisa"><b>Atributi za opis dostupnosti i cijene proizvoda su:</b></p>
+                    <dd>
+                        <dt><b>Naziv trgovine</b></dt><dd>naziv trgovačkog lanca</dd>
+                        <dt><b>Količina</b></dt><dd>stanje proizvoda u pojedinom trgovačkom lancu u tom danu</dd>
+                        <dt><b>Cijena</b></dt><dd>cijena iskazana u kunama</dd>
+                    </dd>
+                </div>
+        </div>
+        <br>
+        <p class=" podaci-preuzmi stil-slova-main"><b>Podaci za preuzimanje</b></p>
+        <hr>
+        <div class="linkovi-materijal">
+            <table class="tablica-linkova">
+                <form action="/download-csv">
+                    <tr>
+                        <td class="lincell"><button type="submit" class="button-stil2"><img src="images/csv.png"></button></td>
+                        <td class="lincell"><button type="submit" class="stil-slova-main button-stil2">asortiman_trgovina.csv</button></td>
+                        <td class="lincell"><button type="submit" class="button-stil stil-slova-main">Preuzmi</button></td>
+                    </tr>
+                </form>
+            </table>
+            <table class="tablica-linkova">
+                <form action="/download-json">
+                    <tr>
+                        <td class="lincell"><button type="submit" class="button-stil2"><img src="images/json.png"></button></td>
+                        <td class="lincell"><button type="submit" class="stil-slova-main button-stil2">asortiman_trgovina.json</button></td>
+                        <td class="lincell"><button type="submit" class="button-stil stil-slova-main">Preuzmi</button></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        <br>
+        <p class="podaci-preuzmi stil-slova-main"><b>Dodatne informacije</b></p>
+        <hr>
+        <div class="metapodaci">
+            <table class="tablica-metapodaci stil-slova-main">
+                <tr><td class="naslovna-cel">Polje</td><td class="naslovna-cel">Vrijednost</td></tr>
+                <tr><td class="cel">Naslov</td><td class="cel">Asortiman trgovina</td></tr>
+                <tr><td class="cel">Ključne riječi</td><td class="cel">proizvod, dostupnost, cijena</td></tr>
+                <tr><td class="cel">Autor</td><td class="cel">Dominik Đurinić</td></tr>
+                <tr><td class="cel">Institucija</td><td class="cel">Fakultet elektrotehnike i računarstva u Zagrebu</td></tr>
+                <tr><td class="cel">Datum kreiranja skupa</td><td class="cel">30.10.2022.</td></tr>
+                <tr><td class="cel">Verzija</td><td class="cel">1.0</td></tr>
+                <tr><td class="cel">Jezik</td><td class="cel">hrvatski</td></tr>
+                <tr><td class="cel">Licenca</td><td class="cel">Creative Commons Attribution 4.0 International <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
+                <tr><td class="cel">Dostupni formati skupa</td><td class="cel">CSV, JSON</td></tr>
+                <tr><td class="cel">Frekvencija ažuriranja</td><td class="cel">dnevno</td></tr>
+            </table>
+        </div>       
+    </main>
+
+    <footer>
+        <div class="podnožje">
+            <p id="copyright">Copyright © 2022. Dominik Đurinić</p>
+        </div>
+    </footer>
+</body>
+</html>

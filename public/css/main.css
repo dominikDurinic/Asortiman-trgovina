@@ -1,0 +1,286 @@
+.zaglavlje{
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+.nonselected{
+    text-decoration: none;
+}
+
+.meni{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.stil-slova-header{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.naslov{
+    font-size: 18px;
+    text-shadow: 2px 2px darkred;
+}
+
+.stil-slova-main{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.789);
+}
+
+.links{
+    text-decoration: none;
+}
+
+.link{
+    outline: none;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 6px;
+}
+
+.link:hover{
+    text-decoration: underline;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.naslovnica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+
+.logo{
+    width: 5cm;
+    margin-top: 1em;
+}
+
+.opis{
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 800px;
+    padding: 16px;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: whitesmoke;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.bg-img{
+    background-image: url("../images/trgovina1.png");
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-img2{
+    background-image: url("../images/datatable.png");
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.opis-proizvoda-trgovina{
+    box-sizing: border-box;
+    max-width: 600px;
+    padding: 16px;
+    /*background-color: whitesmoke;
+    border-style: solid;
+    border-color: whitesmoke;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+}
+
+
+.popis{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;   
+}
+
+.naziv-popisa{
+    text-decoration: underline;
+}
+
+.button-stil{
+    cursor:pointer;
+    background-color: red;
+    border-radius: 12px;
+    color: whitesmoke;
+    border-color:  red;
+    border-radius: 4px;
+}
+
+.button-stil:hover{
+    background-color: rgb(199, 1, 1);
+}
+
+.button-stil2{
+    cursor:pointer;
+    background-color: white;
+    border: none;
+}
+
+.tablica-linkova{
+    display: flex;
+    justify-content: center;
+}
+
+.lincell{
+    border: none;
+}
+
+.podaci-preuzmi{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    border-top: 2px solid red;
+    margin-bottom: 20px;
+}
+
+table.tablica-metapodaci{
+    border-style: solid;
+    border-color: gainsboro;
+    border-collapse: collapse;
+    text-align: center;
+    width: 50%;
+}
+
+.podaci-tablica{
+    border-collapse: collapse;
+    text-align: center;
+    box-sizing: border-box;
+    position:relative;
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 20px;
+    max-width: 80%;
+    padding: 16px;
+}
+
+td.naslovna-cel{
+    font-weight: bold;
+    border-style: solid;
+    border-color: gainsboro;
+    background-color: rgb(220, 213, 213);
+}
+
+td.cel{
+    border-style: solid;
+    border-color: gainsboro;
+    background-color: whitesmoke;
+}
+
+td{
+    border-bottom: rgb(151, 145, 145) 1px solid;
+    text-align: center;
+    padding: 10px;
+}
+
+th{
+    border-bottom: solid gray;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.tablica-pozadina{
+   display: flex;
+   justify-content: center;
+}
+
+.metapodaci{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.podnožje{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: red;
+}
+
+.sadržaj{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+input[type=text]{
+    width: fit-content;
+    background-image: url('../images/searchicon.png');
+    background-position: 4px 4px; 
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+select{
+    width: fit-content;
+    margin: 2px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: red;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+input[type=submit]{
+    width: fit-content;
+    margin: 2px;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: red;
+    border: red;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.obrazac{
+    border: solid whitesmoke 1px;
+    width: fit-content;
+    margin-left: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: whitesmoke;
+}
+
+.filter-link{
+    display: flex;
+}
+
+#filterpreuz{
+    margin-left: 50px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logohead.png" type="image/icon">
+    <title>Asortiman trgovina - Tablica</title>
+    <author hidden>Dominik Đurinić</author>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body class="sadržaj">
+    <header class="zaglavlje">
+        <nav class="navigacija">
+            <div class="naslovnica">
+                <a href="/" class="slika">
+                    <img class="logo" src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="naslovnica">
+                <a href="/" class="stil-slova-header nonselected naslov">OTVORENI SKUP PODATAKA "Asortiman trgovina"</a>
+            </div>
+            <div class="meni">
+                <a href="/" class="link stil-slova-header nonselected">O skupu</a>
+                <a href="/datatable" class="link stil-slova-header">Tablica</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="stil-slova-main">
+        <div class="bg-img2">
+            <div class="opis">
+                <b>Tablica podataka</b><br><br>
+                Tablični prikaz zapisa podataka sa vrijednostima svih atributa. 
+                Mogućnost filtriranja zapisa po vrijednostima podataka te suženje pretrage na atribute "Naziv proizvoda" i "Trgovački lanac".
+            </div>
+        </div> 
+        <div class="filter-link">
+            <div class="obrazac">
+                <form action="/datatable" class="forma" method="post">
+                    <label for="naslov"><b>Filter</b></label>
+                    <input type="text" name="search" id="value" placeholder="Unesite vrijednost pretrage">
+                    <select id="polje-pretrage" name="poljepretrage">
+                        <option value="wildcard" id="svapolja">Sva polja</option>
+                        <option value="nazivproizvod" id="nazpro">Naziv proizvoda</option>
+                        <option value="trgovac" id="trgovac">Trgovački lanac</option>
+                      </select>
+                    <input type="submit" value="Pretraži">
+                </form>
+            </div>
+            
+            <div class="filter-link">
+                <p id="filterpreuz"><b>Podaci za preuzimanje - filtrirani</b></p>
+                <table class="tablica">
+                    <form action="/download-csv-filter">
+                        <tr>
+                            <td class="lincell"><button type="submit" class="button-stil2"><img src="images/csv.png"></button></td>
+                            <td class="lincell"><button type="submit" class="stil-slova-main button-stil2">asortiman_trgovina.csv</button></td>
+                            <td class="lincell"><button type="submit" class="button-stil stil-slova-main">Preuzmi</button></td>
+                        </tr>
+                    </form>
+                </table>
+                <table>
+                    <form action="/download-json-filter">
+                        <tr>
+                            <td class="lincell"><button type="submit" class="button-stil2"><img src="images/json.png"></button></td>
+                            <td class="lincell"><button type="submit" class="stil-slova-main button-stil2">asortiman_trgovina.json</button></td>
+                            <td class="lincell"><button type="submit" class="button-stil stil-slova-main">Preuzmi</button></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+
+        <div class="tablica-pozadina">
+            <table class="podaci-tablica stil-slova-main">
+                        <tr class="početak-tablice">
+                            <th>Šifra proizvoda</th>
+                            <th>Naziv proizvoda</th>
+                            <th>Vrsta proizvoda</th>
+                            <th>Mjerna jedinica</th>
+                            <th>Mjera proizvoda</th>
+                            <th>Proizvođač</th>
+                            <th>Zemlja podrijetla</th>
+                            <th>Dobno ograničenje</th>
+                            <th>Skladištenje</th>
+                            <th>Godina proizvodnje</th>
+                            <th>Trgovački lanac</th>
+                            <th>Količina</th>
+                            <th>Cijena (kuna)</th>
+                        </tr>
+                        <% for(let pod of podaci){ %>
+                            <tr> 
+                              <td><%=pod.sifraproizvod %> </td>
+                              <td><%=pod.nazivproizvod %></td>
+                              <td><%=pod.vrstaproizvod %></td> 
+                              <td><%=pod.mjernajed %></td>
+                              <td><%=pod.mjeraproizvod %></td>
+                              <td><%=pod.proizvodac %></td>
+                              <td><%=pod.zemljapodrijetla %></td>
+                              <td><%=pod.dobnoogranicenje %></td>
+                              <td><%=pod.skladistenje %></td>
+                              <td><%=pod.godinaproizvodnje %></td>
+                              <td><%=pod.trgovackilanac %></td>
+                              <td><%=pod.kolicina %></td>          
+                              <td><%=pod.cijena %></td>
+                            </tr>
+                        <% } %>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="podnožje">
+            <p id="copyright">Copyright © 2022. Dominik Đurinić</p>
+        </div>
+    </footer>
+</body>
+</html>
