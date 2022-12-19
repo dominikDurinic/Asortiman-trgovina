@@ -1,0 +1,270 @@
+{
+	"openapi": "3.0.3",
+	"info": {
+		"title": "Asortiman trgovina - OpenAPI",
+		"description": "OpenAPI specifikacija za Asortiman trgovina API",
+		"contact": {
+			"name": "API Podrška",
+			"email": "api.podrska@fer.hr"
+		},
+		"license": {
+			"name": "Creative Commons Attribution 4.0 International CC BY 4.0",
+			"url": "https://creativecommons.org/licenses/by/4.0/"
+		},
+		"version": "1.0"
+	},
+	"paths":{
+		"/api/v1/products":{
+			"get":{
+				"summary": "Dohvaćanje cjeloukupne kolekcije podataka",
+				"description": "Vraća cjeloukupnu kolekciju podataka iz baze podataka",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno dohvaćen zahtjevani resurs",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"404": {
+						"description": "Neuspješno dohvaćanje resursa"
+					}
+				}
+			},
+			"post":{
+				"summary": "Ubacivanje pojedinačnog resursa u kolekciju",
+				"description": "Ubacuje i vraća uspješno unesen resurs u kolekciju, bazu podataka",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{}
+				],
+				"responses": {
+					"201": {
+						"description": "Uspješno stvoren i unesen novi resurs",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"400": {
+						"description": "Pogrešan unos resursa ili pokušaj unosa duplikata ključa u bazu podataka"
+					}
+				}
+			}			
+		},
+		"/api/v1/products/{sifraProizvod}":{
+			"get":{
+				"summary": "Dohvaćanje pojedinačnog resursa iz kolekcije",
+				"description": "Vraća zahtjevani resurs sa zadanim sifraProizvod iz baze podataka",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "sifraProizvod",
+						"in": "path",
+						"description": "jedinstveni identifikator resursa",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno dohvaćen zahtjevani resurs",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"400": {
+						"description": "Pogrešan unos sifraProizvod"
+					},
+					"404": {
+						"description": "Zahtjevani resurs sa zahtjevanom sifraProizvod ne postoji"
+					}
+				}
+			},
+			"put":{
+				"summary": "Osvježavanje elemenata resursa",
+				"description": "Unos izmjena resursa na temeljem jedinstvenog identifikatora sifraProizvod",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "sifraProizvod",
+						"in": "path",
+						"description": "jedinstveni identifikator resursa",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno unesena izmjena resursa",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"404": {
+						"description": "Zahtjevani resurs sa zahtjevanom sifraProizvod ne postoji"
+					},
+					"400": {
+						"description": "Pogrešan unos sifraProizvod ili pogrešan unos resursa"
+					}
+				}
+			},
+			"delete":{
+				"summary": "Brisanje pojedinačnog resursa iz kolekcije",
+				"description": "Brisanje resursa na temeljem jedinstvenog identifikatora sifraProizvod",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "sifraProizvod",
+						"in": "path",
+						"description": "jedinstveni identifikator resursa",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno obrisan zahtjevani resurs iz kolekcije",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"404": {
+						"description": "Zahtjevani resurs sa zahtjevanom sifraProizvod ne postoji"
+					},
+					"400": {
+						"description": "Pogrešan unos sifraProizvod"
+					}
+				}
+			}
+		},
+		"/api/v1/products/mjernajedinica/{mjernajed}":{
+			"get":{
+				"summary": "Dohvaćanje resursa iz kolekcije",
+				"description": "Vraća zahtjevane resurse sa zadanom mjernom jedinicom proizvoda iz baze podataka",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "mjernajed",
+						"in": "path",
+						"description": "vrsta mjerne jedinice",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno dohvaćen zahtjevani resurs sa zadanom mjernajed",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"400": {
+						"description": "Pogrešan unos mjernajed"
+					},
+					"404": {
+						"description": "Zahtjevana mjernajed ne postoji"
+					}
+				}
+			}
+		},
+		"/api/v1/products/trgovac/{trgovac}":{
+			"get":{
+				"summary": "Dohvaćanje resursa iz kolekcije",
+				"description": "Vraća zahtjevane resurse sa zadanim nazivom trgovačkog lanca iz baze podataka",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "trgovac",
+						"in": "path",
+						"description": "naziv trgovačkog lanca",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno dohvaćen zahtjevani resurs sa zadanim nazivom trgovačkog lanca",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"400": {
+						"description": "Pogrešan unos naziva trgovačkog lanca"
+					},
+					"404": {
+						"description": "Zahtjevani trgovački lanac ne postoji"
+					}
+				}
+			}
+		},
+		"/api/v1/products/vrsta/{vrsta}":{
+			"get":{
+				"summary": "Dohvaćanje resursa iz kolekcije",
+				"description": "Vraća zahtjevane resurse sa zadanom vrstom proizvoda iz baze podataka",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "vrsta",
+						"in": "path",
+						"description": "vrsta proizvoda",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno dohvaćen zahtjevani resurs sa zadanom vrstom proizvoda",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"400": {
+						"description": "Pogrešan unos vrste proizvoda"
+					},
+					"404": {
+						"description": "Zahtjevana vrsta proizvoda ne postoji"
+					}
+				}
+			}
+		},
+		"/api/v1/openapi":{
+			"get":{
+				"summary": "Dohvaćanje OpenAPI specifikacije",
+				"description": "Vraća OpenAPI specifikaciju u json obliku",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Uspješno dohvaćena OpenAPI specifikacija",
+						"content": {
+							"application/json": {}
+						}
+					},
+					"500": {
+						"description": "Neuspješno dohvaćanje OpenAPI specifikacije"
+					}
+				}
+			}
+		}
+	}
+}
