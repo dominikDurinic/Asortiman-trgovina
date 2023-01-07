@@ -9,6 +9,31 @@ const pool = new Pool({
 
 const {successResp, errorResp} = require("./Response");
 const fs = require('fs');
+const { count } = require('console');
+const { json } = require('body-parser');
+
+//JSON Object - JSON-LD
+
+function JSONMaker(results, length, lista) {
+  for(let i=0;i<length;i++){
+    let obj = {"@context":{"@vocab":"http://schema.org/","sifraProizvod":"productID","nazivProizvod":"name","proizvodac":"manufacturer","zemljaPodrijetla":"countryOfOrigin"},
+    "sifraProizvod":JSON.stringify(results.rows[i].sifraproizvod).replace("\"", "").replace("\"", ""), 
+    "nazivProizvod":JSON.stringify(results.rows[i].nazivproizvod).replace("\"", "").replace("\"", ""),
+    "vrstaProizvod":JSON.stringify(results.rows[i].vrstaproizvod).replace("\"", "").replace("\"", ""),
+    "mjernaJed":JSON.stringify(results.rows[i].mjernajed).replace("\"", "").replace("\"", ""),
+    "mjeraProizvod":JSON.stringify(results.rows[i].mjeraproizvod).replace("\"", "").replace("\"", ""),
+    "proizvodac":JSON.stringify(results.rows[i].proizvodac).replace("\"", "").replace("\"", ""),
+    "zemljaPodrijetla":JSON.stringify(results.rows[i].zemljapodrijetla).replace("\"", "").replace("\"", ""),
+    "dobnoOgranicenje":JSON.stringify(results.rows[i].dobnoogranicenje).replace("\"", "").replace("\"", ""),
+    "skladistenje":JSON.stringify(results.rows[i].skladistenje).replace("\"", "").replace("\"", ""),
+    "godinaProizvodnje":JSON.stringify(results.rows[i].godinaproizvodnje).replace("\"", "").replace("\"", ""),
+    "trgovackiLanac":JSON.stringify(results.rows[i].trgovackilanac).replace("\"", "").replace("\"", ""),
+    "kolicina":JSON.stringify(results.rows[i].kolicina).replace("\"", "").replace("\"", ""),
+    "cijena":JSON.stringify(results.rows[i].cijena).replace("\"", "").replace("\"", "")
+    };
+    lista.push(obj);
+  }
+}
 
 //GET OpenApi
 const getOpenApi = (request,response)=>{
@@ -27,7 +52,9 @@ const getProduct = (request, response) => {
       if(error){
         response.status(404).json(errorResp(404,"Not Found", "Neuspješno dohvaćanje resursa"))
       }else{
-        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs", results.rows))
+        let lista = [];
+        JSONMaker(results,results.rows.length, lista);
+        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen resurs", lista))
       }
    })
   }
@@ -43,7 +70,9 @@ const getProductBySifra = (request, response) => {
       if (results.rowCount==0) {
         response.status(404).json(errorResp(404,"Not Found", "Zahtjevani resurs sa sifraProizvod = " + sifraProizvod + " ne postoji"))
       }else{
-        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa sifraProizvod = " + sifraProizvod, results.rows))
+        let lista = [];
+        JSONMaker(results,results.rows.length, lista);
+        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa sifraProizvod = " + sifraProizvod, lista))
       }
     })
   }
@@ -61,7 +90,9 @@ const getProductByMjernaJed = (request, response) => {
       if (results.rowCount==0) {
         response.status(404).json(errorResp(404,"Not Found", "Zahtjevana mjerna jedinica  " + mjernajed + " ne postoji"))
       }else{
-        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa mjernaJed = " + mjernajed, results.rows))
+        let lista = [];
+        JSONMaker(results,results.rows.length, lista);
+        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa mjernaJed = " + mjernajed, lista))
       }
     })
   }
@@ -78,7 +109,9 @@ const getProductByTrgovac= (request, response) => {
       if (results.rowCount==0) {
         response.status(404).json(errorResp(404,"Not Found", "Zahtjevani trgovački lanac " + trgovac + " ne postoji"))
       }else{
-        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa trgovackiLanac = " + trgovac, results.rows))
+        let lista = [];
+        JSONMaker(results,results.rows.length, lista);
+        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa trgovackiLanac = " + trgovac, lista))
       }
     })
   }
@@ -95,7 +128,9 @@ const getProductByVrsta = (request, response) => {
       if (results.rowCount==0) {
         response.status(404).json(errorResp(404,"Not Found", "Zahtjevana vrsta proizvoda " + vrsta + " ne postoji"))
       }else{
-        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa vrstaProizvod = " + vrsta, results.rows))
+        let lista = [];
+        JSONMaker(results,results.rows.length, lista);
+        response.status(200).json(successResp(200, "OK", "Uspješno dohvaćen zahtjevani resurs sa vrstaProizvod = " + vrsta, lista))
       }
     })
   }

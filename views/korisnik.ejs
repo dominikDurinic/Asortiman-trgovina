@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/logohead.png" type="image/icon">
+    <title>Asortiman trgovina</title>
+    <author hidden>Dominik Đurinić</author>
+</head>
+<body class="sadržaj">
+    <header class="zaglavlje">
+        <nav class="navigacija">
+            <div class="prijava-nav">
+                <%if(!isAuthenticated) {%>
+                    <button class="btn-prijava"><a href="/login" class="links stil-slova-header prijava">Prijava</a></button>
+                <%} else { %>
+                    <button class="btn-prijava"><a href="/korisnik" class="links stil-slova-header prijava">Korisnički profil</a></button>    
+                    <button class="btn-prijava"><a href="/korisnik" class="links stil-slova-header prijava">Osvježi preslike</a></button>
+                    <button class="btn-prijava"><a href="/logout" class="links stil-slova-header prijava">Odjava</a></button>
+                    <% if(user) { %>
+                    <button class="btn-korisnik"><img class="korisnik" src="images/user.png" alt="logoUser" width="20px">  <%=user.name%></button>
+                    <% } %>
+                <% } %>
+            </div>
+            <div class="naslovnica">
+                <a href="/" class="slika">
+                    <img class="logo" src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="naslovnica">
+                <a href="/" class="stil-slova-header nonselected naslov">OTVORENI SKUP PODATAKA "Asortiman trgovina"</a>
+            </div>
+            <div class="meni">
+                <a href="/" class="stil-slova-header prijava nonselected">O skupu</a>
+                <a href="/datatable" class="stil-slova-header nonselected prijava">Tablica</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <% if(!isAuthenticated) { %>
+            <div class="err-div">
+                <div class="opis-err stil-slova-main">
+                    <b>Niste prijavljeni u sustav!</b><br><br> 
+                    Ukoliko želite pristupiti Vašim korisničkim podacima, prijavite se pritiskom na sljedeći gumb.<br><br>
+                    <button class="btn-prijava"><a href="/login" class="links stil-slova-header prijava">Prijava</a></button>
+                </div>
+            </div>
+        <% } else {%>
+            <div class="stil-slova-main">
+                <div class="korpodaci">
+                    <h3>Korisnički podaci</h3>
+                    <p class="col-gray">Podaci dohvaćeni iz OpenId objekta nakon prijave u sustav.</p>
+                    <div class="kor-podaci">
+                        <p class="col-gray"><b>Photo</b></p>
+                        <img class="round-picture" src="<%=user.picture%>" alt="picture">
+                        <div class="par">
+                            <p class="col-gray"><b>Name</b></p>
+                            <p class="col-gray"><b>Nickname</b></p>
+                            <p class="forma-user-srednji"><b><%=user.name%></b></p>
+                            <p class="forma-user-srednji"><b><%=user.nickname%></b></p>
+                        </div>
+                        <div class="par">
+                            <p class="col-gray"><b>E-mail</b></p>
+                            <p class="col-gray"><b>E-mail verified</b></p>
+                            <p class="forma-user-srednji"><b><%=user.email%></b></p> 
+                            <p class="forma-user"><b><%=user.email_verified%></b></p>
+                        </div>
+                    <h4>Dodatni podaci</h4>
+                        <p class="col-gray"><b>User ID</b></p>
+                        <p class="forma-user-veci"><b><%=user.sub%></b></p>
+                        <p class="col-gray"><b>Session ID</b></p>
+                        <p class="forma-user-veci"><b><%=user.sid%></b></p> 
+                        <p class="col-gray"><b>Updated At</b></p>
+                        <p class="forma-user-srednji"><b><%=user.updated_at%></b></p>                
+                    </div>
+                </div>  
+            </div>
+        <% } %>    
+    </main>
+
+    <footer>
+        <div class="podnožje">
+            <p id="copyright">Copyright © 2022. Dominik Đurinić</p>
+        </div>
+    </footer>
+</body>
+</html>

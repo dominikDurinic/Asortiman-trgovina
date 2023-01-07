@@ -13,6 +13,18 @@
 <body class="sadržaj">
     <header class="zaglavlje">
         <nav class="navigacija">
+            <div class="prijava-nav">
+                <%if(!isAuthenticated) {%>
+                    <button class="btn-prijava"><a href="/login" class="links stil-slova-header prijava">Prijava</a></button>
+                <%} else { %>
+                    <button class="btn-prijava"><a href="/korisnik" class="links stil-slova-header prijava">Korisnički profil</a></button>    
+                    <button class="btn-prijava"><a href="/datatable" class="links stil-slova-header prijava">Osvježi preslike</a></button>
+                    <button class="btn-prijava"><a href="/logout" class="links stil-slova-header prijava">Odjava</a></button>
+                    <% if(ime) { %>
+                    <button class="btn-korisnik"><img class="korisnik" src="images/user.png" alt="logoUser" width="20px">  <%=ime.name%></button>
+                    <% } %>
+                <% } %>
+            </div>
             <div class="naslovnica">
                 <a href="/" class="slika">
                     <img class="logo" src="images/logo.png" alt="Logo">
@@ -22,8 +34,8 @@
                 <a href="/" class="stil-slova-header nonselected naslov">OTVORENI SKUP PODATAKA "Asortiman trgovina"</a>
             </div>
             <div class="meni">
-                <a href="/" class="link stil-slova-header nonselected">O skupu</a>
-                <a href="/datatable" class="link stil-slova-header">Tablica</a>
+                <a href="/" class="stil-slova-header nonselected prijava">O skupu</a>
+                <a href="/datatable" class="stil-slova-header prijava selected">Tablica</a>
             </div>
         </nav>
     </header>
